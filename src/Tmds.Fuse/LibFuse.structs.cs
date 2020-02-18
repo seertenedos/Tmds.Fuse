@@ -44,7 +44,7 @@ namespace Tmds.Fuse
     unsafe delegate int chown_delegate(path* path, uint uid, uint gid, fuse_file_info* fi);
     unsafe delegate int statfs_delegate(path* path, statvfs* vfs);
     unsafe delegate int flush_delegate(path* path, fuse_file_info* fi);
-    unsafe delegate int fsync_delegate(path* path, fuse_file_info* fi);
+    unsafe delegate int fsync_delegate(path* path, int datasync, fuse_file_info* fi);
     unsafe delegate int setxattr_delegate(path* path, void* name, void* buffer, size_t size, int flags);
     unsafe delegate int getxattr_delegate(path* path, void* name, void* buffer, size_t size);
     unsafe delegate int listxattr_delegate(path* path, void* buffer, size_t size);
